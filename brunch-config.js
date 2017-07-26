@@ -7,10 +7,10 @@ exports.files = {
     }
   },
   stylesheets: {
-    joinTo:{
-       'css/app.css': /^app/
+    joinTo: {
+      'css/app.css': /^app/
     }
- }
+  }
 };
 
 exports.hooks = {
@@ -24,7 +24,42 @@ exports.hooks = {
 }
 
 exports.plugins = {
-  babel: {presets: ['latest']}
+  babel: { presets: ['latest'] },
+  "static": {
+    processors: [
+      require('html-brunch-static')({
+        processors: [],
+        defaultContext: {},
+        partials: /\/partials\//,
+        layouts: /\/layouts\//,
+        handlebars: {
+          enableProcessor: true,
+          helpers: {
+            ifEq: function(a, b, opts) {
+              if (a === b) {
+                return opts.fn(this);
+              } else {
+                return opts.inverse(this);
+              }
+            },
+            ifEqDebug: function(a, b, opts) {
+              console.log("a: '" + a + "'");
+              console.log("b: '" + b + "'");
+              if (a === b) {
+                return opts.fn(this);
+              } else {
+                return opts.inverse(this);
+              }
+            },
+            log: function(msg) {
+              var msg;
+              msg = 1 <= arguments.length ? slice.call(arguments, 0) : [];
+              return console.log(msg);
+            }
+          }
+          //////////
+        }
+      })
+    ]
+  }
 };
-
-
