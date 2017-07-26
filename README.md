@@ -7,6 +7,14 @@ This is a modern JS skeleton for [Brunch](http://brunch.io).
 Clone this repo manually or use `brunch new dir -s es6`
 
 ## Getting started
+<<<<<<< HEAD
+=======
+
+* Install (if you don't have them):
+    * [Node.js](http://nodejs.org): `brew install node` on OS X
+    * [Brunch](http://brunch.io): `npm install -g brunch`
+    * Brunch plugins and app dependencies: `npm install`
+>>>>>>> 3a06400f7923406a9a1e84ff2bc23b14e9f20558
 * Run:
     * `npm start` — watches the project with continuous rebuild. This will also launch HTTP server with [pushState](https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history).
     * `npm run build` — builds minified project for production
@@ -21,5 +29,8 @@ To use proposed JS features not included into ES6, do this:
 
 * `npm install --save-dev babel-preset-stage-0`
 * in `brunch-config.js`, add the preset: `presets: ['latest', 'stage-0']`
+<<<<<<< HEAD
 
 #
+=======
+>>>>>>> 3a06400f7923406a9a1e84ff2bc23b14e9f20558
