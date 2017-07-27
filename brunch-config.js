@@ -1,4 +1,5 @@
 // See http://brunch.io for documentation.
+var prehtml=require("./helpers/createpage.js");
 exports.files = {
   javascripts: {
     joinTo: {
@@ -16,6 +17,7 @@ exports.files = {
 exports.hooks = {
   preCompile() {
     console.log("About to compile...");
+    console.log(prehtml);
     return Promise.resolve();
   },
   onCompile(generatedFiles, changedAssets) {

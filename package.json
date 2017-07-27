@@ -7,7 +7,9 @@
   "repository": "",
   "scripts": {
     "start": "brunch watch --server --port 5008",
-    "build": "brunch build --production"
+    "build": "brunch build --production",
+    "test":"node helpers/createpage.js",
+    "test2":"node helpers/precombile.js"
   },
   "dependencies": {},
   "devDependencies": {
